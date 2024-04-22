@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ task.name }}</title>
+</head>
+<body>
+    <h1>{{ task.name }}</h1>
+    <p>Descripción: {{ task.description }}</p>
+    {% if task.completed %}
+        <p>Estado: Completado</p>
+    {% else %}
+        <p>Estado: Pendiente</p>
+    {% endif %}
+    <p>Fecha de vencimiento: {{ task.due_date }}</p>
+</body>
+</html>
