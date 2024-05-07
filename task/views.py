@@ -5,7 +5,6 @@ from django.shortcuts import render
 from .models import Task
 
 def index(request):
-    #Ordena las tareas por fecha de vencimiento y muestra las primeras 5 tareas
     latest_task_list = Task.objects.order_by("-due_date")[:5]
     context = {
         "latest_task_list": latest_task_list,
