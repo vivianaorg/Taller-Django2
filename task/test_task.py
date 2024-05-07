@@ -26,8 +26,7 @@ def test_completed():
                 response = client.get(reverse('task:detail', args=(task.id,)))
                 assert response.status_code == 200
                 assert task.completed
-                assert "Completado" in response.content.decode()
-                
+                assert "Completado" in response.content.decode()           
 @pytest.mark.django_db
 def test_nombre_vacio():
         all_tasks = Task.objects.all()
